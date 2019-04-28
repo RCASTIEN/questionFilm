@@ -44,7 +44,7 @@ class FormFilm extends Component {
         if (res.error) {
           alert(res.error);
         } else {
-          alert(`Film ajouté avec l'ID ${res}!`);
+          alert(`Film ajouté avec l'ID ${res}! Très bon film ;)`);
         }
       }).catch(e => {
         console.error(e);
