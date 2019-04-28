@@ -20,7 +20,6 @@ class FormFilm extends Component {
         
        }
        submitForm(e) {
-        e.preventDefault();
 
         const config = {
             method: "POST",
@@ -31,18 +30,18 @@ class FormFilm extends Component {
            };
            
         const url = "http://campus-bordeaux.ovh:3001/api/quests/movies/";
-        
+        e.preventDefault();       
         fetch(url, config)
         .then(res => res.json())
          .then(res => {
            if (res.error) {
              alert(res.error);
            } else {
-            alert('Erreur lors de l\'ajout d\'un film');
+            alert(`Film très bon ;) !`);
            }
          }).catch(e => {
            console.error(e);
-           alert(`Film très bon ;) !`);
+           alert('Erreur lors de l\'ajout d\'un film');
          });
        }
        
